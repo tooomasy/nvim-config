@@ -17,6 +17,10 @@ return {
                 update_cwd = false,
                 ignore_list = {},
             },
+            git = {
+                enable = true,
+                ignore = false,
+            }
         }
     },
     {

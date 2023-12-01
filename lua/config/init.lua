@@ -19,9 +19,6 @@ local opts = {
     defaults = {
         lazy = true,
     },
-    -- install = {
-    -- 	colorscheme = { "github_dark_tritanopia" },
-    -- },
     rtp = {
         disabled_plugins = {
             "gzip",
@@ -36,7 +33,7 @@ local opts = {
         },
     },
     change_detection = {
-        notify = true,
+        notify = false,
     },
 }
 require("lazy").setup("plugins", opts)

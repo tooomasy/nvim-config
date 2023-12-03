@@ -17,7 +17,7 @@ require("config.keymaps")
 
 local opts = {
     defaults = {
-        lazy = true,
+        lazy = false,
     },
     rtp = {
         disabled_plugins = {

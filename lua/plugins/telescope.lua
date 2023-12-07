@@ -4,8 +4,9 @@ return {
     lazy = false,
     config = function()
         require('telescope').load_extension('fzf')
-    end,
-    keys = {
-        vim.keymap.set("n", "<C-p>", ":Telescope find_files<CR>")
-    }
+
+        local builtin = require('telescope.builtin')
+        vim.keymap.set("n", "<C-p>", builtin.find_files, {})
+        vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
+    end
 }

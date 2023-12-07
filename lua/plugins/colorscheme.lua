@@ -10,11 +10,17 @@ return {
             local theme = require("lush_theme.arctic")
 
             local darkBg = '#181818'
+            local darkYello = "#e2c08d"
+            local lightGreen = "#73c991"
 
             local spec = lush.extends({theme}).with(function ()
                 return {
                     EndOfBuffer { fg = darkBg },
-                    NvimTreeNormal { bg = darkBg }
+                    NvimTreeNormal { bg = darkBg },
+                    NvimTreeFolderName { fg = theme.Normal.fg },
+                    NvimTreeGitDirty { fg = darkYello },
+                    NvimTreeGitNew = { fg = lightGreen },
+                    NvimTreeGitDeleted = { fg = theme.ErrorMsg.fg },
                 }
             end)
             lush(spec)

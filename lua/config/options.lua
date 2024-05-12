@@ -1,9 +1,9 @@
 local opt = vim.opt
 
 -- Tab / Indentation
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.softtabstop = 4
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.softtabstop = 2
 opt.expandtab = true
 opt.smartindent = true
 opt.wrap = false
@@ -30,3 +30,5 @@ opt.autochdir = false
 opt.mouse:append("a")
 opt.clipboard:append("unnamedplus")
 opt.modifiable = true
+
+opt.swapfile = false

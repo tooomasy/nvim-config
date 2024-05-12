@@ -1,6 +1,6 @@
 return {
 	"rcarriga/nvim-dap-ui",
-	dependencies = { "mfussenegger/nvim-dap" },
+	dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
 	config = function()
 		require("dapui").setup({
 			layouts = {
@@ -44,18 +44,18 @@ return {
 		})
 
 		local dap, dapui = require("dap"), require("dapui")
-        local nvim_api = require "nvim-tree.api"
+		local nvim_api = require("nvim-tree.api")
 		dap.listeners.after.event_initialized["dapui_config"] = function()
 			dapui.open()
-            nvim_api.tree.close()
+			nvim_api.tree.close()
 		end
 		dap.listeners.before.event_terminated["dapui_config"] = function()
 			dapui.close()
-            nvim_api.tree.open()
+			nvim_api.tree.open()
 		end
 		dap.listeners.before.event_exited["dapui_config"] = function()
 			dapui.close()
-            nvim_api.tree.open()
+			nvim_api.tree.open()
 		end
 	end,
 }

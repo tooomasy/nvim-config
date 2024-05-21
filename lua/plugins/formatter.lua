@@ -12,6 +12,12 @@ return {
 				cpp = {
 					require("formatter.filetypes.cpp").clangformat,
 				},
+				typescript = {
+					require("formatter.filetypes.typescript").prettier,
+				},
+				typescriptreact = {
+					require("formatter.filetypes.typescriptreact").prettier,
+				},
 				["*"] = {
 					require("formatter.filetypes.any").remove_trailing_whitespace,
 				},
